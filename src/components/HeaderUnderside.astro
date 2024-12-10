@@ -1,0 +1,204 @@
+---
+
+---
+
+<div class="header-mobile">
+    <div class="container-mobile">
+        <img class="logo-desktop" src="/public/imgs/sparrowlogo.svg" alt="Sparrow Logo">
+        <img class="logo-mobile" src="/public/imgs/sparrowlogowhite.svg" alt="Sparrow Logo">
+        <nav>
+          <ul>
+            <li><a href="#">TATTOO</a></li>
+            <li><a href="#">PIERCING</a></li>
+            <li><a href="#">ARTISTER</a></li>
+          </ul>
+        </nav>
+        <button class="burger-menu">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </d>
+    </div>
+</div>
+
+<div class="header-desktop">
+    <div class="container-desktop">
+     
+      <!-- Centered logo -->
+      <div class="logo-desktop">
+        <img src="/public/imgs/sparrowlogo.svg" alt="Logo">
+      </div>
+    
+      <!-- Right-side navigation link -->
+      <nav class="nav-right">
+        <a href="#home"><img src="/public/imgs/tattoogunwhite.svg" alt="tattoo icon">TATTOO</a>
+        <a href="#about"><img src="/public/imgs/needlewhite.svg" alt="needle icon">PIERCING</a>
+        <a href="#artister"><img src="/public/imgs/artistwhite.svg" alt="artist icon">ARTISTER</a>
+      </nav>
+    
+        <button class="burger-menu">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </d>
+    </div>
+  </div>
+    
+    <div class="mobile-menu">
+      <nav>
+        <ul>
+          <li><a href="#">TATTOO</a></li>
+          <li><a href="#">PIERCING</a></li>
+          <li><a href="#">ARTISTER</a></li>
+        </ul>
+      </nav>
+    </div>
+  
+  
+  <script src="../Styles/menu.js"></script>
+
+  <style>
+    .header-mobile {
+  background: #6E865B;
+  padding: 1rem 0rem;
+}
+
+
+.container-mobile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1024px;
+  padding: 0 1rem;
+  margin: auto;
+  background-color: #6E865B;
+}
+.container-desktop {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1600px;
+  padding: 0 1rem;
+  margin: auto;
+}
+
+
+/* Burger Menu */
+.burger-menu {
+  border: 0;
+  background: #6E865B;
+}
+
+.burger-menu:hover {
+  cursor: pointer;
+}
+
+.burger-menu .bar {
+  width: 30px;
+  height: 5px;
+  background: white;
+}
+
+.burger-menu > * + * {
+  margin-top: 5px;
+}
+
+/* End Burger Menu */
+
+.header-mobile nav ul {
+  display: none;
+}
+
+nav li {
+  list-style-type: none;
+}
+
+.header-mobile nav li:not(:last-child) {
+  margin-right: 1rem;
+}
+
+/* Mobile Menu */
+.logo-desktop{
+display: none;
+}
+
+.mobile-menu {
+  height: 0;
+  background: #6E865B;
+  overflow: hidden;
+  transition: height .25s;
+}
+
+.mobile-menu.open {
+  height: 130px;
+}
+
+.mobile-menu li {
+  padding: .5rem 1rem;
+  
+}
+
+
+/* End Mobile Menu */
+
+@media screen and (min-width: 992px) {
+  
+.burger-menu {
+    display: none;
+  }
+.logo-desktop{
+  display: block;
+}
+.logo-desktop {
+  position: absolute;
+  padding-left: 10px;
+  display: block;
+  top: 10px; 
+}
+.logo-mobile{
+  display: none;
+}
+.header-mobile nav ul {
+  display: flex;
+}
+.header-mobile {
+  display: none;
+  padding: 1rem 0rem;
+}
+
+.header-desktop{
+  display: block;
+  background-color: #A8B69D;
+}
+.container-desktop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  max-width: 1600px;
+  padding: 0 1rem;
+  margin: auto;
+  position: relative;
+  background-color: #A8B69D;
+  padding-bottom: 2rem;
+}
+.container-desktop nav{
+  display: flex;
+  gap: 10rem;
+  padding-left: 25%;
+}
+.container-desktop a{
+  text-decoration: none;
+  font-family: "Oswald", sans-serif;
+  color: white;
+  font-size: 24px;
+}
+.container-desktop img{
+  padding-right: 5px;
+}
+.nav-right {
+  display: flex;
+  gap: 1rem; 
+  padding-top: 65px;
+}
+}
+  </style>
