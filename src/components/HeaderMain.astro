@@ -24,8 +24,8 @@
   <div class="container-desktop">
     <!-- Left-side navigation links -->
     <nav class="nav-left">
-      <a href="#home"><img src="/public/imgs/tattoogunwhite.svg" alt="tattoo icon">TATTOO</a>
-      <a href="#about"><img src="/public/imgs/needlewhite.svg" alt="needle icon">PIERCING</a>
+      <a href="#home"><img class="icon" src="/public/imgs/tattoogunwhite.svg" alt="tattoo icon">TATTOO</a>
+      <a href="#about"><img class="icon" src="/public/imgs/needlewhite.svg" alt="needle icon">PIERCING</a>
     </nav>
   
     <!-- Centered logo -->
@@ -35,7 +35,7 @@
   
     <!-- Right-side navigation link -->
     <nav class="nav-right">
-      <a href="#artister"><img src="/public/imgs/artistwhite.svg" alt="artist icon">ARTISTER</a>
+      <a href="#artister"><img class="icon" src="/public/imgs/artistwhite.svg" alt="artist icon">ARTISTER</a>
     </nav>
   
       <button class="burger-menu">
@@ -55,6 +55,8 @@
       </ul>
     </nav>
   </div>
+
+  <img class="hero-desktop" src="/public/imgs/fillerimage.svg" alt="Filler">
 
 
 <script src="../Styles/menu.js"></script>
@@ -195,8 +197,14 @@ display: none;
 .container-desktop a{
   text-decoration: none;
   font-family: "Oswald", sans-serif;
-  color: black;
+  color: white;
   font-size: 24px;
+  -webkit-filter: invert(0%);
+}
+
+.container-desktop a:hover{
+  -webkit-filter: invert(100%);
+  transition: 0.3s;
 }
 
 
@@ -209,6 +217,18 @@ display: none;
   display: flex;
   gap: 1rem; 
   padding-top: 85px;
+}
+
+.hero-desktop{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+}
+
+.icon{
+  padding-right: 5px;
 }
 }
 
