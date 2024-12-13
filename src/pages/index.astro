@@ -1,7 +1,6 @@
 ---
 import LandingLayout from '../layouts/LandingLayout.astro';
 import "../Styles/style.css"
-
 ---
 
 <LandingLayout>
@@ -47,8 +46,14 @@ import "../Styles/style.css"
         <p class="mid-section-mini">Find os på&nbsp;<a href="https://www.instagram.com/sparrow_tattoo_and_piercing/">Instagram</a>,&nbsp; <a href="https://www.facebook.com/sparrowtattooandpiercing">Facebook</a>&nbsp;og mail</p>
         <img src="/public/imgs/vinesdetailssmall.svg" alt="Vines small">
     </div>
-    
+
+    <div>
+        <h2 class="gallery-h2">GALLERY</h2>
+    </div>
+    <!-- FROM CODEPEN -->    
 </LandingLayout>
+
+<script src="../Styles/gallery.js"></script>
 
 <style>
 .hero-title{
@@ -68,7 +73,7 @@ h1{
     font-size: 30px;
     color: white;
 }
-.artist-h2{
+.artist-h2, .gallery-h2{
     font-size: 40px;
     font-weight: 400;
     display: flex;
@@ -167,5 +172,71 @@ h1{
 .mid-section img{
     position: absolute;
     top: 250px;
+}
+
+/* GALLERY CSS ONLY!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+
+@media only screen and (max-width: 600px){
+
+.hero-title{
+    display: none;
+}
+.artist-section{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 150px;
+}
+
+.artist-main-section{
+    position: relative;
+}
+.artist-main-section .vines-detail{
+    position: absolute;
+    width: 100%;
+    left: 0%;
+    top: 0%;
+}
+
+.mid-section{
+    background-color: #A8B69D;
+    position: relative;
+    z-index: -1;
+}
+.mid-section-smaller{
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 400;
+    font-family: "Jomolhari", serif;
+}
+.mid-section-main{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 400;
+    font-family: "Jomolhari", serif;
+    line-height: 103%;
+}
+.mid-section{
+    padding: 50px 0 50px 0;
+    background-color: #A8B69D;
+    position: relative;
+    z-index: -1;
+}
+.mid-section-mini{
+    display: flex;
+    justify-content: center;
+    font-family: "Jomolhari", serif;
+    font-size: 12px;
+}
+.mid-section img{
+    position: absolute;
+    top: 130px;
+    width: 70%;
+}
 }
 </style>
