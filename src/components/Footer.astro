@@ -1,0 +1,189 @@
+---
+---
+<!DOCTYPE html>
+<section class="footer">
+           <img class="decoration1" src="/public/imgs/leaf.svg" alt="leaf 1">
+    <img class="decoration2" src="/public/imgs/leaf.svg" alt="leaf 2">
+    <div class="box_flex">
+        <div>
+            <img src="/public/imgs/sparrowlogowhite.svg" alt="Logo">
+        </div>
+        <div>
+            <p class="footer_text">Hos os er det kun fantasien der sætter grænser for hvor kunsten bærer os hen. Sammen
+                kreerer vi den perfekte
+                oplevelse
+                for dig som kunde, hvor dine tanker og ideer får frit spil og med vores kærlige samt kunstneriske hænder
+                bliver til
+                virkelighed. Vores mission og højeste prioritet er at give dig som kunde en ekstraordinær god oplevelse.
+                Hjertelig
+                velkommen til Sparrow Tattoo & piercing.
+                <br>Frie fugle flyver bedst.
+            </p>
+        </div>
+    </div>
+    <div class="footer_grid">
+        <div>
+            <img src="/public/imgs/location.svg" alt="">
+            <h2>ADRESSE</h2>
+            <p>Kongensgade 45 st th, 5000 Odense</p>
+        </div>
+        <div>
+            <img src="/public/imgs/openings.svg" alt="">
+            <h2>ÅBNINGSTIDER</h2>
+            <p>Man - Lør : 10:00 - 18:00 <br>
+                Søndag : Lukket</p>
+        </div>
+        <div>
+            <img src="/public/imgs/phone.svg" alt="">
+            <h2>TELEFON</h2>
+            <p>+45 26233543</p>
+        </div>
+        <div>
+            <img src="/public/imgs/mail.svg" alt="">
+            <h2>EMAIL</h2>
+            <p>sparrow.tattoo.piercing@outlook.com
+            </p>
+        </div>
+    </div>
+    <div class="socials">
+        <div class="social-icons">
+          <a href="https://www.instagram.com/sparrow_tattoo_and_piercing/" target="_blank">  <img src="/public/imgs/instagram.svg" alt="Instagram"></a>
+           <a href="https://www.facebook.com/sparrowtattooandpiercing/" target="_blank"> <img src="/public/imgs/facebook.svg" alt="Facebook"></a>
+
+        </div>
+        <p class="social-text">Sparrow tattoo & piercing 2024. all rights reserved</p>
+    </div>
+ 
+</section>
+
+</html>
+
+<style>
+.footer {
+    position: relative; /* Container for absolutely positioned elements */
+    overflow: hidden;   /* Ensure decorations stay confined */
+    background-color: #171717;
+    color: white;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.decoration1, .decoration2 {
+    position: absolute;
+    z-index: 0; /* Place behind content */
+    opacity: 0.5; /* Optional: Subtle decorations */
+    pointer-events: none; /* Prevent interaction */
+}
+
+.decoration1 {
+    width: 60%;
+    top: 10%; 
+left: -10%;
+}
+
+.decoration2 {
+      transform: scaleX(-1);
+    width: 70%;
+    bottom: 30%;
+    left: 60%;
+}
+
+.box_flex, .footer_grid, .socials {
+    position: relative; 
+    z-index: 1; 
+}
+
+
+    .box_flex {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        margin-bottom: 2rem;
+    }
+
+    .box_flex img {
+        width: 300px;
+        height: auto;
+    }
+
+    .footer_text {
+        max-width: 80ch;
+        text-align: center;
+    }
+
+    .footer_grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr)
+    }
+
+    .socials {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 1rem;
+        margin-top: 4rem;
+        padding-bottom: 1rem;
+    }
+
+    .social-icons {
+        display: flex;
+        gap: 10px;
+
+    }
+
+    .social-icons img {
+        width: 24px;
+        height: 24px;
+        object-fit: cover;
+        transition: opacity 0.3s ease;
+
+    }
+
+    .social-icons img:hover{
+        opacity: 0.5;   
+    }
+
+    .social-text {
+        margin: 0;
+        text-align: right;
+    }
+
+
+    @media (max-width: 768px) {
+        .footer_grid {
+            grid-template-columns: 1fr;
+           gap: 3rem;
+           margin-bottom: 2rem;
+        }
+
+        .footer_grid div {
+            margin-bottom: 1rem;
+        }
+
+        .box_flex {
+            padding: 1rem;
+        }
+
+        .footer_text {
+            font-size: 0.9rem;
+            max-width: 40ch;
+        }
+
+            .decoration1 {
+    width: 150%;
+    top: 10%; 
+left: -40%;
+}
+
+.decoration2 {
+      transform: scaleX(-1);
+    width: 130%;
+    bottom: 20%;
+    left: 20%;
+}
+    }
+
+    
+</style>
