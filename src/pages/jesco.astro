@@ -1,0 +1,150 @@
+---
+import UndersideLayout from "../layouts/UndersideLayout.astro";
+const url = "https://iappxpaknhhgmbrvhzbp.supabase.co/rest/v1/sparrowimg";
+const options = {
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImlhcHB4cGFrbmhoZ21icnZoemJwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzI5ODk1OTAsImV4cCI6MjA0ODU2NTU5MH0.nGfO4u9jRka1lvCcRPl7VLNGJxnv6AlxPqug6_vePo8",
+  },
+};
+
+const billeder = await fetch(url, options).then((res) => res.json());
+console.log(billeder);
+
+---
+
+<UndersideLayout >
+<div class="top-artist">
+    <img class="vines" src="/public/imgs/vinesdetails.svg" alt="">
+    <div class="artist-left">
+        <img src="/public/imgs/jesco-colour.svg" alt="">
+        <h3>Tatovør</h3>
+        <a href="https://www.instagram.com/g_h.ink/">Instagram</a>
+    </div>
+    <div class="artist-right">
+        <div>
+            <div class="artist-name">
+                <h2>JESCO SCHUBERT</h2>
+                <img src="/public/imgs/tattoogunblack.svg" alt="">
+            </div>
+        <p>Hej mit navn er Jesco og jeg har tatoveret siden 2016! Jeg har siden  jeg kan huske altid elsket at tegne og er det man kalder en all-around  artist som mestre de fleste stilarter, mine foretrukken er farverig  Neotradiotonel, Oldscool og Blackwork.</p>
+        <p>Jeg prøver altid at  tilfredstille mine kunder på bedst mulige vis. Jeg er meget tålmodig og  tegner gerne dine designs helt fra bunden så du kan få den fedeste og  mest unikke tatovering. Jeg glæder mig til at se, hvad vi sammen kan skabe!</p>
+        </div>
+        <div class="grid_1-1-1">
+            <img src={"/imgs/designs/" + billeder[7].img} alt="" />
+            <img src={"/imgs/designs/" + billeder[8].img} alt="" />
+            <img src={"/imgs/designs/" + billeder[9].img} alt="" />
+            <img src={"/imgs/designs/" + billeder[10].img} alt="" />
+            <img src={"/imgs/designs/" + billeder[11].img} alt="" />
+            <img src={"/imgs/designs/" + billeder[12].img} alt="" /> 
+        </div>
+    </div>
+</div>
+<h1>PRISER</h1>
+<div class="artist-priser">
+    
+    <div class="price-box">
+        <p>5X5 CM: 500,-</p>
+        <img src="/public/imgs/designs/jesco1.svg" alt="">
+    </div>
+    <div class="price-box">
+        <p>TIMESESSION: 1000,-</p>
+        <img src="/public/imgs/designs/jesco2.svg" alt="">
+    </div>
+    <div class="price-box">
+        <p>HELDAGSESSION: 4500,-</p>
+        <img src="/public/imgs/designs/jesco3.svg" alt="">
+    </div>
+</div>
+
+</UndersideLayout>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Jomolhari&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Outfit:wght@100..900&display=swap');
+
+    .vines{
+        position: absolute;
+        right: 2%;
+        top: 2%;
+        z-index: -1;
+    }
+    h1{
+        display: flex;
+        justify-content: center;
+        font-family: "Jomolhari", serif;
+        font-size: 70px;
+        background-color: #B7C3AD;
+        padding: 100px;
+    }
+    h2{
+        font-family: "Oswald", sans-serif;
+        font-size: 40px;
+        font-weight: 400;
+    }
+    h3{
+        font-family: "Outfit", sans-serif;
+        font-size: 32px;
+        letter-spacing: 15%;
+        font-weight: 400;
+    }
+    p{
+        font-family: "Outfit", sans-serif;
+        font-size: 16px;
+    }
+    a{
+        font-family: "Outfit", sans-serif;
+        font-size: 32px;
+        color: black;
+    }
+
+    .top-artist{
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        gap: 100px;
+        padding: 100px 100px 0 100px;
+    }
+    .artist-left{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .artist-name{
+        display: flex;
+    }
+    .artist-name img{
+        padding: 5px;
+    }
+    .grid_1-1-1{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+    }
+    .grid_1-1-1 img{
+        width: 100%;
+    }
+
+   .price-box p{
+    font-family: "Oswald", sans-serif;
+    font-size: 30px;
+    border: solid 1px #B7C3AD;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #6E865B;
+   }
+   .price-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   }
+   .artist-priser{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 100px;
+    padding: 0 100px 0 100px;
+   }
+   .price-box img{
+    width: 100%;
+   }
+
+</style>
