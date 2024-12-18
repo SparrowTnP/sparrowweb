@@ -3,20 +3,62 @@
 ---
 
 <div class="side_menu">
-  <img class="side_img" src="" alt="" />
-  <img class="side_img" src="" alt="" />
-  <img class="side_img" src="" alt="" />
+  <div class="stick"> 
+    <div class="img_back">
+       <a href="https://www.instagram.com/sparrow_tattoo_and_piercing/?ref=web&hl=en"> <img class="side_img" src="/imgs/instagram.svg" alt="" /></a>
+    </div>
+    <div class="img_back">
+      <a href="https://www.facebook.com/sparrowtattooandpiercing"><img class="side_img" src="/imgs/facebook.svg" alt="" /></a>
+    </div>
+    <div class="img_back">
+      <a href="https://www.sparrow.tattoo.piercing@outlook.com"><img class="side_img" src="/imgs/mail.svg" alt="" /></a>
+    </div>
+  </div>
 </div>
 
 <style>
+  .stick {
+margin-top: 800px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0; 
+     -
+  }
+
+  .stick a{
+       position: -webkit-sticky;
+    position: sticky;
+    top: 0; 
+  }
   .side_menu {
-    width: 100px;
+    width: 50px;
+    position: -webkit-sticky;
+    position: absolute;
+    height:3000px;
+    right: 0; 
+    top: 0;
   }
 
   .side_img {
     width: 100%;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
+   
   }
+
+  .img_back {
+    background-color: #6e865b;
+    margin: 10% 0 10% 0;
+     padding: 10%;
+     -webkit-border-bottom-left-radius:20%;
+     -webkit-border-top-left-radius:20%;
+
+  }
+
+  @media (min-width: 700px) {
+.side_menu{
+    width: 100px;
+}
+
+
+
+}
 </style>
