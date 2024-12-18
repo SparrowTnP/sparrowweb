@@ -1,9 +1,246 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Gallery from '../components/Gallery.astro';
+import LandingLayout from '../layouts/LandingLayout.astro';
 import "../Styles/style.css"
-
 ---
 
-<Layout>
+<LandingLayout>
+    <div class="hero-title">
+    <p class="mini-h1">WELCOME TO</p>
+    <h1>SPARROW TATTOO AND PIERCING</h1>
+    </div>
+    <div class="artist-main-section">
+    <img class="vines-detail" src="/public/imgs/vinesdetails.svg" alt="">
+    <h2 class="artist-h2">ARTISTERNE</h2>
+    <div class="artist-section">
+        
+        <div class="artist-box">
+        <a href="#">
+        <img src="/public/imgs/jesco-colour.svg" alt="Jesco Colour">
+        <h3><img src="/public/imgs/tattoogunblack.svg" alt="Tattoo gun black">Jesćo Schubert</h3>
+        <h4>TATOVØR</h4>
+        </a>
+        </div>
 
-</Layout>
+        <div class="artist-box">
+        <a href="#">
+        <img src="/public/imgs/nadia-colour.png" alt="Nadia Colour">
+        <h3><img src="/public/imgs/needleblack.svg" alt="Tattoo gun black">Nadia Østergaard</h3>
+        <h4>PIERCER</h4>
+        </a>
+        </div>
+        
+        <div class="artist-box">
+        <a href="#">
+        <img src="/public/imgs/caroline-colour.svg" alt="Caroline Colour">
+        <h3><img src="/public/imgs/tattoogunblack.svg" alt="Tattoo gun black">Caroline Amundsen</h3>
+        <h4>TATOVØR</h4>
+        </a>
+        </div>
+    
+    </div>
+    </div>
+
+    <div class="mid-section">
+        <h2 class="mid-section-smaller">KROPSUDSMYKNING</h2>
+        <h2 class="mid-section-main">I VERDENSKLASSE</h2>
+        <p class="mid-section-mini">Find os på&nbsp;<a href="https://www.instagram.com/sparrow_tattoo_and_piercing/">Instagram</a>,&nbsp; <a href="https://www.facebook.com/sparrowtattooandpiercing">Facebook</a>&nbsp;og mail</p>
+        <img src="/public/imgs/vinesdetailssmall.svg" alt="Vines small">
+    </div>
+
+    <div>
+        <h2 class="gallery-h2">GALLERY</h2>
+    </div>
+    <!-- FROM CODEPEN -->   
+     <Gallery /> 
+</LandingLayout>
+
+
+
+<script src="../Styles/gallery.js"></script>
+
+<style>
+.hero-title{
+    padding: 250px 0 250px 0;
+}
+h1{
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 64px;
+    line-height: 104%;
+}
+.mini-h1{
+    display: flex;
+    justify-content: center;
+    font-family: "Jomolhari", serif;
+    font-size: 30px;
+    color: white;
+}
+.artist-h2, .gallery-h2{
+    font-size: 40px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    margin: 100px 0 100px 0;
+}
+
+.artist-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 70%;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 150px;
+}
+.artist-main-section{
+    position: relative;
+}
+
+.artist-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px auto;
+}
+.artist-box a{
+  text-decoration: none;
+  color: black;
+}
+.artist-box img {
+  max-width: 100%; /* Optional: To ensure the images are responsive */
+  margin-bottom: 10px;
+  -webkit-filter: grayscale(100%);
+}
+.artist-box img:hover {
+  -webkit-filter: grayscale(0%);
+  transition: 0.3s;
+}
+
+.artist-box h3 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.artist-box h3 img {
+  margin-right: 5px; /* Adds spacing between the small image and text */
+}
+
+.artist-box h4 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 35%;
+  margin: 5px 0;
+}
+.artist-main-section .vines-detail{
+    position: absolute;
+    width: 70%;
+    left: 29%;
+    top: -30%;
+}
+
+
+.mid-section-smaller{
+    display: flex;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: 400;
+    font-family: "Jomolhari", serif;
+}
+.mid-section-main{
+    display: flex;
+    justify-content: center;
+    font-size: 64px;
+    font-weight: 400;
+    font-family: "Jomolhari", serif;
+    line-height: 103%;
+}
+.mid-section{
+    padding: 100px 0 100px 0;
+    background-color: #A8B69D;
+    position: relative;
+    z-index: -1;
+}
+.mid-section-mini{
+    display: flex;
+    justify-content: center;
+    font-family: "Jomolhari", serif;
+    font-size: 20px;
+}
+.mid-section img{
+    position: absolute;
+    top: 250px;
+}
+
+/* GALLERY CSS ONLY!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+
+@media only screen and (max-width: 600px){
+
+.hero-title{
+    display: none;
+}
+.artist-section{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 150px;
+}
+
+.artist-main-section{
+    position: relative;
+}
+.artist-main-section .vines-detail{
+    position: absolute;
+    width: 100%;
+    left: 0%;
+    top: 0%;
+}
+
+.mid-section{
+    background-color: #A8B69D;
+    position: relative;
+    z-index: -1;
+}
+.mid-section-smaller{
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 400;
+    font-family: "Jomolhari", serif;
+}
+.mid-section-main{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 400;
+    font-family: "Jomolhari", serif;
+    line-height: 103%;
+}
+.mid-section{
+    padding: 50px 0 50px 0;
+    background-color: #A8B69D;
+    position: relative;
+    z-index: -1;
+}
+.mid-section-mini{
+    display: flex;
+    justify-content: center;
+    font-family: "Jomolhari", serif;
+    font-size: 12px;
+}
+.mid-section img{
+    position: absolute;
+    top: 130px;
+    width: 70%;
+}
+}
+</style>
