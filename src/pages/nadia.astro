@@ -1,0 +1,156 @@
+---
+import UndersideLayout from "../layouts/UndersideLayout.astro";
+const url = "https://iappxpaknhhgmbrvhzbp.supabase.co/rest/v1/sparrowimg";
+const options = {
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImlhcHB4cGFrbmhoZ21icnZoemJwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzI5ODk1OTAsImV4cCI6MjA0ODU2NTU5MH0.nGfO4u9jRka1lvCcRPl7VLNGJxnv6AlxPqug6_vePo8",
+  },
+};
+
+const billeder = await fetch(url, options).then((res) => res.json());
+console.log(billeder);
+
+---
+
+<UndersideLayout >
+<div class="top-artist">
+    <img class="vines" src="/public/imgs/vinesdetails.svg" alt="">
+    <div class="artist-left">
+        <img src="/public/imgs/nadia-colour.png" alt="">
+        <h3>Tatovør</h3>
+        <a href="https://www.instagram.com/piercings_by_nadia_qstergaard/">Instagram</a>
+    </div>
+    <div class="artist-right">
+        <div>
+            <div class="artist-name">
+                <h2>NADIA ØSTERGAARD</h2>
+                <img src="/public/imgs/needleblack.svg" alt="">
+            </div>
+        <p>Mit navn er Nadia og jeg er pierce-artist. Jeg har været aktiv i  branchen i knap 10 år og er som piercer meget dedikeret i mit fag. Som bodypiercer er jeg meget passioneret for min kunst! Jeg elsker at lave piercinger, vejlede og lave smykke / øre stylinger.</p>
+        <p>Du vil som piercer opleve mig som omsorgsfuld, ærlig, sød og energisk. Jeg følger mine kunder til dørs og sammen skaber vi de perfekte rammer for  en god piercing oplevelse for dig. Jeg glæder mig til at udsmykke dig.</p>
+        </div>
+        <div class="grid_1-1-1">
+            <img src={"/imgs/designs/" + billeder[17].img} alt="" />
+            <img src={"/imgs/designs/" + billeder[17].img} alt="" />
+            <img src={"/imgs/designs/" + billeder[17].img} alt="" />
+            <img src={"/imgs/designs/" + billeder[17].img} alt="" />
+            <img src={"/imgs/designs/" + billeder[17].img} alt="" />
+            <img src={"/imgs/designs/" + billeder[17].img} alt="" /> 
+        </div>
+    </div>
+</div>
+<h1>PRISER</h1>
+
+<div class="grid_1-1">
+    <img src="/public/imgs/piercingpriser.svg" alt="">
+    <div>
+        <h2 class="smykkepriser">SMYKKE PRISER</h2>
+        <p>Alle mine priser indkludere et kvalitetsmykke lavet af implant grade titanium (Ti-6al-4v-eli asmt f136).</p>
+        <p>Jeg går ikke på kompromis med kvalitet for at sikre den bedste heling fra start. </p>
+        <p>Startsmykker vil være en plain kugle alt efter placering. </p>
+        <p>Jeg har dog et af Danmarks største udvalg af lækre startsmykker i både  titanium, 24 karat guldbelagt (PVD) eller 14 karats solid guld &  hvidguld. </p>
+        <p>Mit udvalg byder på alt fra smukke sten i forskellige  størrelser og former, derudover har jeg et bredt udvalg af natursmykker  da de er mine personlige farvoritter. </p>
+        <p>Jeg bestræber mig på at  have et så stort udvalg som muligt i butikken men skulle du have lyst  til at bestille et smykke jeg endnu ikke har i mit sortiment er du  velkommen til at tage et kig hos mine samarbejdespartnere.</p>
+        <p>Neometal: <a href="https://www.neometal.com/">https://www.neometal.com</a></p>
+        <p>Invuctus: <a href="https://invictusbodyjewelry.com/">https://invictusbodyjewelry.com/</a></p>
+        <p>Junipurr Jewelry: <a href="https://junipurrjewelry.com/">https://junipurrjewelry.com/</a></p>
+        <p>Mushroom Bodu Jewelry: <a href="https://mushroombodyjewelry.com/">https://mushroombodyjewelry.com/</a></p>
+        <p>Maya Jewelry: <a href="https://mayajewelry.com/">https://mayajewelry.com/</a></p>
+        <p>Leroi: <a href="https://www.leroi.com/">https://www.leroi.com/</a></p>
+        <p>Jeg bestiller hjertens gerne smykker hjem til mine kunder. Kontakt mig på: Nadiapiercer@outlook.dk</p>
+    </div>
+</div>
+
+</UndersideLayout>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Jomolhari&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Outfit:wght@100..900&display=swap');
+
+    .vines{
+        position: absolute;
+        right: 2%;
+        top: 2%;
+        z-index: -1;
+    }
+    h1{
+        display: flex;
+        justify-content: center;
+        font-family: "Jomolhari", serif;
+        font-size: 70px;
+        background-color: #B7C3AD;
+        padding: 100px;
+    }
+    h2{
+        font-family: "Oswald", sans-serif;
+        font-size: 40px;
+        font-weight: 400;
+    }
+    h3{
+        font-family: "Outfit", sans-serif;
+        font-size: 32px;
+        letter-spacing: 15%;
+        font-weight: 400;
+    }
+    p{
+        font-family: "Outfit", sans-serif;
+        font-size: 16px;
+    }
+    a{
+        font-family: "Outfit", sans-serif;
+        font-size: 32px;
+        color: black;
+    }
+
+    .top-artist{
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        gap: 100px;
+        padding: 100px 100px 0 100px;
+    }
+    .artist-left{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .artist-name{
+        display: flex;
+    }
+    .artist-name img{
+        padding: 5px;
+    }
+    .grid_1-1-1{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+    }
+    .grid_1-1-1 img{
+        width: 100%;
+    }
+
+
+    .smykkepriser{
+        display: flex;
+        justify-content: left;
+    }
+
+    .grid_1-1{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        padding: 50px 172px 0 172px;
+    }
+    .grid_1-1 a{
+        font-size: 16px;
+    }
+    .grid_1-1 p{
+        font-family: "Outfit", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+    }
+    img {
+        margin: 0 auto;
+        padding-top: 50px;
+    }
+</style>
